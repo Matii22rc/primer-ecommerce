@@ -7,7 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Aquí incluiremos las URLs de nuestras apps más adelante
     path('', include('products.urls', namespace='products')),
-    path('', include('cart.urls', namespace='cart'))
+    path('', include('cart.urls', namespace='cart')),
+    path('orders/', include('orders-urls', namespace='orders')),
 ]
 
 # Esto permite que Django sirva archivos de imagen durante el desarrollo
